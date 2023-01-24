@@ -14,14 +14,13 @@ WHERE VIN IN
      FROM vehicle_orders
         where counts=1);
 
+
 SELECT *
 FROM Vehicles
 WHERE VIN IN
     (SELECT vehicle_id
      FROM vehicle_orders
         where counts=1);
-
-
 
 
 START TRANSACTION;
@@ -35,7 +34,6 @@ WHERE VIN IN
      FROM vehicle_orders
         where counts=1);
 ROLLBACK;
-
 
 
 
