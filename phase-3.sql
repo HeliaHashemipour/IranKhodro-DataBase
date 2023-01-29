@@ -1,3 +1,5 @@
+USE IranKhodro_DB;
+
 INSERT INTO Costumers_Address
 VALUES (26036,"Texas","Dawson","Sussex Court");
 INSERT INTO Costumers_Address
@@ -94,69 +96,45 @@ INSERT INTO Models
 VALUES (20,"tip4",6);
 
 INSERT INTO colors
-VALUES ("meshki");
+VALUES (0,"meshki");
 INSERT INTO colors
-VALUES ("sefid");
+VALUES (1,"sefid");
 INSERT INTO colors
-VALUES ("ghermez");
+VALUES (2,"ghermez");
 INSERT INTO colors
-VALUES ("doodi");
+VALUES (3,"doodi");
 INSERT INTO colors
-VALUES ("noghreyi");
+VALUES (4,"noghreyi");
 
 INSERT INTO geartype
-VALUES ("automat");
+VALUES (0,"automat");
 INSERT INTO geartype
-VALUES ("dasti");
+VALUES (1,"dasti");
 
 INSERT INTO Vehicles
-VALUES (0,0,0,"dasti","meshki");
+VALUES (12345678,0,0,0,0);
 INSERT INTO Vehicles
-VALUES (1,4,0,"dasti","noghreyi");
+VALUES (13254768,4,13,0,4);
 INSERT INTO Vehicles
-VALUES (2,3,0,"automat","doodi");
+VALUES (77777777,3,10,1,3);
 INSERT INTO Vehicles
-VALUES (3,4,0,"automat","noghreyi");
+VALUES (88888888,4,14,1,4);
 INSERT INTO Vehicles
-VALUES (4,3,0,"dasti","meshki");
+VALUES (87654321,3,11,0,0);
 INSERT INTO Vehicles
-VALUES (5,4,0,"automat","ghermez");
+VALUES (23456890,1,4,1,2);
 INSERT INTO Vehicles
-VALUES (6,6,18,"automat","sefid");
+VALUES (11223344,6,19,1,1);
 INSERT INTO Vehicles
-VALUES (7,6,20,"dasti","doodi");
+VALUES (22334455,6,20,0,3);
 INSERT INTO Vehicles
-VALUES (8,6,19,"dasti","noghreyi");
+VALUES (99887766,2,8,0,4);
 INSERT INTO Vehicles
-VALUES (9,6,20,"automat","ghermez");
+VALUES (44556677,1,3,1,2);
 INSERT INTO Vehicles
-VALUES (10,5,19,"automat","meshki");
+VALUES (11223322,5,17,1,0);
 INSERT INTO Vehicles
-VALUES (11,5,18,"dasti","doodi");
-
-INSERT INTO Costumers_Address
-VALUES (26036,"Texas","Dawson","Sussex Court");
-INSERT INTO Costumers_Address
-VALUES (53075,"Oklahoma","Oklahoma City","Benson Park Drive");
-INSERT INTO Costumers_Address
-VALUES (06004,"Illinois","Chicago","4633 Kembery Drive");
-INSERT INTO Costumers_Address
-VALUES (41484,"Maryland","Rockville","Roane Avenue");
-INSERT INTO Costumers_Address
-VALUES (69498,"Michigan","Okemos","Elk Avenue");
-INSERT INTO Costumers_Address
-VALUES (48362,"Wisconsin","West Allis","Joseph Street");
-INSERT INTO Costumers_Address
-VALUES (12629,"Ohio","Dayton","Norma Avenue");
-INSERT INTO Costumers_Address
-VALUES (17722,"California","Walnut","Paradise Lane");
-INSERT INTO Costumers_Address
-VALUES (52293,"Florida","Miami","Golden Street");
-INSERT INTO Costumers_Address
-VALUES (23790,"Colorado","Denver","Snider Street");
-INSERT INTO Costumers_Address
-VALUES (86331,"Illinois","Arthur Avenue","Freeport");
-
+VALUES (18899551,5,16,0,3);
 
 INSERT INTO Costumers
 VALUES (5932694823,"Helia","Hashemipour",26036,09336659592);
@@ -180,19 +158,6 @@ INSERT INTO Costumers
 VALUES (5361231363,"Sólveig","Bertelsson",23790,04956169150);
 INSERT INTO Costumers
 VALUES (7048104163,"Hjálmar","Kristmundsson",86331,02207555060);
-
-INSERT INTO Suppliers_Address
-VALUES (11519,"Washington","Seattle","Dale Avenue");
-INSERT INTO Suppliers_Address
-VALUES (24098,"Texas","Houston"," Margaret Street");
-INSERT INTO Suppliers_Address
-VALUES (96919,"Iowa","Sioux City","Clousson Road");
-INSERT INTO Suppliers_Address
-VALUES (81958,"New Jersey","Morristown","Jadewood Farms");
-INSERT INTO Suppliers_Address
-VALUES (01396,"Kentucky","Murray","Coffman Alley");
-INSERT INTO Suppliers_Address
-VALUES (37321,"Arizona","Phoenix","Farm Meadow Drive");
 
 INSERT INTO Suppliers
 VALUES (0,"Noel Esquibel","2005-05-09 10:45:15","2023-05-10 11:04:15","Gadiel Téllez",11519);
@@ -231,11 +196,8 @@ INSERT INTO sparepart_orders
 VALUES (1,6086221790,86,3);
 
 INSERT INTO vehicle_orders
-VALUES (0,9606996204,2,0);
+VALUES (0,9606996204,2,11223344);
 INSERT INTO vehicle_orders
-VALUES (1,7048104163,1,6);
+VALUES (1,7048104163,1,88888888);
 INSERT INTO vehicle_orders
-VALUES (2,5361231363,0,6);
-
-INSERT INTO vehicle_orders
-VALUES (2,5932694823,0,6);
+VALUES (2,5361231363,0,22334455);

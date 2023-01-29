@@ -1,8 +1,8 @@
+USE IranKhodro_DB;
+
 ALTER TABLE Suppliers
 RENAME COLUMN name TO name_Sp;
 
-ALTER TABLE Suppliers
-RENAME COLUMN id TO id_Sp;
 
 CREATE VIEW supplier_supplies AS
     SELECT
@@ -10,15 +10,13 @@ CREATE VIEW supplier_supplies AS
     FROM
         Suppliers s
             INNER JOIN
-        sparepart sp ON s.id_sp = sp.supplier_id;
+        sparepart sp ON s.id_s = sp.supplier_id;
 
 
 
 
-ALTER TABLE costumers
-RENAME COLUMN id TO id_c;
-ALTER TABLE Suppliers
-RENAME COLUMN id TO id_Sp;
+# ALTER TABLE costumers
+# RENAME COLUMN id TO id_c;
 
 CREATE VIEW customer_orders_vehicle AS
 SELECT
@@ -32,6 +30,8 @@ SELECT
     WHERE
         sp.counts = 1;
 
+
+
 CREATE VIEW customer_orders_spareparts AS
     SELECT
         *
@@ -40,14 +40,18 @@ CREATE VIEW customer_orders_spareparts AS
             INNER JOIN
         costumers c ON sp.costumer_id = c.id_c
             INNER JOIN
-        SparePart s ON s.id=sp.sparepart_id
+        SparePart s ON s.id_sp=sp.sparepart_id
     WHERE
         sp.counts = 1;
 
 
 
-ALTER TABLE models
-RENAME COLUMN brand_id TO brand_id_m;
+
+ALTER TABLE brands
+RENAME COLUMN name TO name_b;
+
+ALTER TABLE vehicles
+RENAME COLUMN brand_id TO brand_id_v;
 
 CREATE VIEW car_brand_model AS
     SELECT
@@ -55,7 +59,7 @@ CREATE VIEW car_brand_model AS
     FROM
         vehicles v
             INNER JOIN
-        models m ON m.id = v.model_id
+        models m ON m.id_m = v.model_id
             INNER JOIN
-        brands b ON b.id_b = v.brand_id;
+        brands b ON b.id_b = v.brand_id_v;
 

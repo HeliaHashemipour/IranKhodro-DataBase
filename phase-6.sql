@@ -1,3 +1,5 @@
+USE IranKhodro_DB;
+
 ALTER TABLE Vehicles
 ADD is_sold BOOLEAN default FALSE;
 
@@ -5,7 +7,7 @@ SELECT *
 FROM vehicles;
 SELECT COUNT(*)
      FROM vehicle_orders
-        where VIN=vehicle_orders.vehicle_id;
+        where VIN = vehicle_orders.vehicle_id;
 
 UPDATE Vehicles
 SET is_sold = TRUE
@@ -26,7 +28,7 @@ WHERE VIN IN
 START TRANSACTION;
 SELECT @counts:= MAX(counts) FROM vehicle_orders;
 INSERT INTO vehicle_orders
-VALUES (4,3674225298,1,4);
+VALUES (5,3674225298,1,11223322);
 select *
 from Vehicles
 WHERE VIN IN

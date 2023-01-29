@@ -1,3 +1,5 @@
+USE IranKhodro_DB;
+
 CREATE ASSERTION stock_assert
 CHECK (
     SELECT count(*)
